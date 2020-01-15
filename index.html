@@ -8,8 +8,9 @@
 <body>
 
     <nav>
-        <ul class="nav-items">
+        <ul>
             <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><button id="res-button" >Resume</button></li>
         </ul>
@@ -30,18 +31,16 @@
     <br>
 
     <a name="about"></a>
-    <br>
 
-    <div class="about">
+    <div id="about" class="clear-right">
         <h1>About</h1>
         <div class="clearfix">
-            <img id="portrait" src="imgs/sheldon.jpeg" alt="Nate Grobe">
+            <img id="portrait" src="imgs/nate-portrait.jpg" alt="Nate Grobe">
             <p>
-                &emsp;Hi I'm Nate Grobe, a 2nd year software engineering student at Ontario Tech University. I love animals and have three dogs. In my free time I enjoy watching TV or movies, especially crime and comedy shows. I also enjoy playing a variety of videogames such as The Witcher or Super Smash Bro's. In the winter, I like to ski whenever possible and I do my best to make it out as often as I can.
-
+                &emsp;Hi, I'm Nate Grobe, a 2nd-year software engineering student at Ontario Tech University. I love animals and have three dogs. In my free time, I enjoy watching TV or movies, especially crime and comedy shows. I also enjoy playing a variety of videogames such as The Witcher or Super Smash Bros. In the winter, I ski whenever possible and in the summer I like to hike.
                 <br><br>
 
-                &emsp;I grew up competing springboard and platform diving. I trained and competed for ten years and attended many major competitions such as Junior and Senior Nationals as well as a host of provincial level events and a few international events traveling as far as Cuba. I love the sport and still coach my own group of kids at the Toronto Pan American Sports Center in Scarborogh while in school.
+                &emsp;I grew up competing springboard and platform diving. I trained and competed for ten years and attended many major competitions such as Junior and Senior Nationals as well as a host of provincial-level events. I love the sport and still coach my own group of kids at the Toronto Pan American Sports Center in Scarborough while in school.
             </p>
         </div>
     </div>
@@ -55,19 +54,52 @@
     <br>
     <br>
 
-    <a name="projects"></a>
+    <a name="skills"></a>
+
+    <h1>Skills</h1>
+    <ul class="skills">
+        <li>Exceptional oral and written communication skills</li>
+        <li>Excellent problem solving</li>
+        <li>Eager to learn and a passion for coding</li>
+    </ul>
+    <h4>Technologies I have been working with recently:</h4>
+    <ul class="skills">
+        <li>Python, Flask and Pillow</li>
+        <li>C# and .NET</li>
+        <li>Java and Open Liberty</li>
+        <li>Web development using HTML, CSS, JS, PHP, MySQL</li>
+    </ul>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
 
-    <div class="projects">
+
+    <a name="projects"></a>
+
+    <div id="projects" class="clear-right">
         <h1>Projects</h1>
         <ul>
             <li class="project-item">
                 <a href="https://github.com/NateGrobe/maze-generator" target="_blank">
                     <h2>Maze Generator</h2>
                 </a>
-                <p>
-                    Uses a depth first algorithm to randomly generate a maze. The size of the maze is decided by the user. Written in Python and visualizes the algorithm using the Turtle module.
-                </p>
+                <div class="clearfix">
+                    <img src="imgs/maze.gif" alt="Gif of algorithm">
+                    <p>
+                        Uses a depth first algorithm to randomly generate a maze. The size of the maze is decided by the user.
+                        <br><br>
+                        The whole project was written in python. To visualize the algorithm as it runs, the Turtle module was used.
+                        <br><br>
+                        The blue demonstrates the backtracking done by the algorithm when a dead end is reached.
+                    </p>
+                </div>
+
             </li>
 
             <br>
@@ -77,7 +109,7 @@
                     <h2>Pixel Art Generator</h2>
                 </a>
                 <p>
-                    Takes an image and generates a pixelated version of the image using Python and the Pillow library.
+                    Takes an image and generates a pixelated version of the image using Python and the Pillow library. The image is pixelated by accessing 10x10 squares of pixels from the original image, averaging their RGB values, and replacing the original pixel values with the new RGB values.
                 </p>
             </li>
 
@@ -88,42 +120,32 @@
                     <h2>Rubik's Cube</h2>
                 </a>
                 <p>
-                    Automatically or manually scrambles a rubik's cube and then displays each face of the cube after scrambling. <br>
-                    Rendering of colour image to come.
+                    Automatically or manually scrambles a rubik's cube and then displays each face of the cube in the terminal after scrambling.
                 </p>
             </li>
 
             <br>
 
-            <li class="project-item">
-                <a href="https://github.com/NateGrobe/web-dev-assignment1" target="_blank">
-                    <h2>The Blacklist Website</h2>
-                </a>
-                <p>
-                    This project was an assignment from my Web Development course in University where I had to make a website for a TV show or movie. It was written using HTML, CSS and a little bit of JavaScript.
-                </p>
-            </li>
-            <br>
             <li class="project-item">
                 <a href="https://github.com/NateGrobe/Dashboard" target="_blank">
                     <h2>Dashboard</h2>
                 </a>
                 <p>
-                    Tracks assignments for school courses. Sorts them from a csv file based on course, completion status and due date. <strong>This project is still in progress.</strong>
+                    Tracks assignments for school courses. Sorts them from a csv file based on course, completion status and due date. The web-app was written in Python using the Flask library.
                 </p>
-                <img id="dashboard" src="imgs/dashboard.JPG" alt="">
             </li>
 
         </ul>
     </div>
 
     <hr>
-    <div class="contact">
+
+    <div id="contact">
         <ul>
             <li>519-573-9685</li>
             <li>natepgrobe@gmail.com</li>
-            <li><a href="https://github.com/NateGrobe" target="_blank"><img id="github" src="imgs/icons/github-logo.svg" alt="Github"></a></li>
-            <li><a href="https://www.linkedin.com/in/nate-grobe-bb8252170/" target="_blank"><img id="linkedIn" src="imgs/icons/linkedin-logo.png" alt=""></a></li>
+            <li><a href="https://github.com/NateGrobe" target="_blank"><img src="imgs/icons/github-logo.svg" alt="Github"></a></li>
+            <li><a href="https://www.linkedin.com/in/nate-grobe-bb8252170/" target="_blank"><img src="imgs/icons/linkedin-logo.png" alt=""></a></li>
         </ul>
     </div>
 
