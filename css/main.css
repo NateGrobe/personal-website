@@ -19,7 +19,7 @@ nav ul {
 
 nav li {
     display: inline;
-    padding: 30px;
+    padding: 10px;
 }
 
 a, a:link, a:visited {text-decoration: none;}
@@ -78,9 +78,17 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-.skills{
+#skills {
+    display: none;
+}
+
+.skills-list{
     list-style: circle inside;
     padding: 5px;
+}
+
+#projects {
+    display: none;
 }
 
 #projects a:hover {color: #0E7C7B;}
@@ -97,7 +105,14 @@ nav a:hover {
     padding-left: 20px;
 }
 
-#contact {text-align: center;}
+#birds {
+    margin-right: 25%;
+}
+
+#contact {
+    text-align: center;
+    display: none;
+}
 
 #contact li{
     display: inline-block;

@@ -4,14 +4,14 @@
     <title>Nate Grobe</title>
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
 
     <nav>
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a id="skills-link" href="#skills">Skills</a></li>
+            <li><a id="projects-link" href="#projects">Projects</a></li>
             <li><button id="res-button" >Resume</button></li>
         </ul>
     </nav>
@@ -19,28 +19,32 @@
     <br>
     <br>
     <br>
-
-    <p id="hi">Hi my name is</p>
-    <p id="name">Nate Grobe!</p>
-    <p>I am a 2nd year software engineering student at Ontario Tech University in Oshawa.</p>
-
+    <br>
     <br>
     <br>
     <br>
     <br>
     <br>
 
-    <a name="about"></a>
 
-    <div id="about" class="clear-right">
-        <h1>About</h1>
+
+    <div id="about" class="clear-right fade">
+
         <div class="clearfix">
+            <p id="hi">Hi my name is</p>
             <img id="portrait" src="imgs/nate-portrait.jpg" alt="Nate Grobe">
+            <p id="name">Nate Grobe!</p>
+
             <p>
-                &emsp;Hi, I'm Nate Grobe, a 2nd-year software engineering student at Ontario Tech University. I love animals and have three dogs. In my free time, I enjoy watching TV or movies, especially crime and comedy shows. I also enjoy playing a variety of videogames such as The Witcher or Super Smash Bros. In the winter, I ski whenever possible and in the summer I like to hike.
+                &emsp;I am a 2nd year software engineering student at Ontario Tech University in Oshawa. I have a passion for software development and enjoy working on projects in my spare time.
+
                 <br><br>
 
-                &emsp;I grew up competing springboard and platform diving. I trained and competed for ten years and attended many major competitions such as Junior and Senior Nationals as well as a host of provincial-level events. I love the sport and still coach my own group of kids at the Toronto Pan American Sports Center in Scarborough while in school.
+                &emsp;I love animals and have three dogs. In my free time, I enjoy watching TV or movies, especially crime and comedy shows. I also enjoy playing a variety of videogames such as The Witcher or Super Smash Bros. In the winter, I ski whenever possible and in the summer I like to hike.
+
+                <br><br>
+
+                &emsp;I grew up competing springboard and platform diving. I trained and competed for ten years and attended many major competitions such as Junior and Senior Nationals as well as a host of provincial-level events. I love the sport and still coach my own group of kids at the Toronto Pan American Sports Center in Scarborough.
             </p>
         </div>
     </div>
@@ -53,54 +57,71 @@
     <br>
     <br>
     <br>
-
-    <a name="skills"></a>
-
-    <h1>Skills</h1>
-    <ul class="skills">
-        <li>Exceptional oral and written communication skills</li>
-        <li>Excellent problem solving</li>
-        <li>Eager to learn and a passion for coding</li>
-    </ul>
-    <h4>Technologies I have been working with recently:</h4>
-    <ul class="skills">
-        <li>Python, Flask and Pillow</li>
-        <li>C# and .NET</li>
-        <li>Java and Open Liberty</li>
-        <li>Web development using HTML, CSS, JS, PHP, MySQL</li>
-    </ul>
-
     <br>
     <br>
     <br>
     <br>
     <br>
     <br>
-    <br>
-    <br>
+    <div id="skills-pholder"></div>
+    <br><br>
 
 
-    <a name="projects"></a>
+    <div id="skills">
+        <h1>Skills</h1>
+        <ul class="skills-list">
+            <li>Exceptional oral and written communication skills</li>
+            <li>Excellent problem solving</li>
+            <li>Eager to learn and a passion for coding</li>
+        </ul>
+        <h4>Technologies I have been working with recently:</h4>
+        <ul class="skills-list">
+            <li>Python, Flask and Pillow</li>
+            <li>C#</li>
+            <li>Java and Open Liberty</li>
+            <li>Web development using HTML, CSS, JS, PHP, MySQL</li>
+        </ul>
+    </div>
 
-    <div id="projects" class="clear-right">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="projects-pholder"></div>
+
+    <div id="projects">
         <h1>Projects</h1>
         <ul>
-            <li class="project-item">
-                <a href="https://github.com/NateGrobe/maze-generator" target="_blank">
-                    <h2>Maze Generator</h2>
-                </a>
-                <div class="clearfix">
-                    <img src="imgs/maze.gif" alt="Gif of algorithm">
-                    <p>
-                        Uses a depth first algorithm to randomly generate a maze. The size of the maze is decided by the user.
-                        <br><br>
-                        The whole project was written in python. To visualize the algorithm as it runs, the Turtle module was used.
-                        <br><br>
-                        The blue demonstrates the backtracking done by the algorithm when a dead end is reached.
-                    </p>
-                </div>
+            <div class="clear-right">
+                <li class="project-item">
+                    <a href="https://github.com/NateGrobe/maze-generator" target="_blank">
+                        <h2>Maze Generator</h2>
+                    </a>
+                    <div class="clearfix">
+                        <img src="imgs/maze.gif" alt="Gif of algorithm">
+                        <p>
+                            Uses a depth first algorithm to randomly generate a maze. The size of the maze is decided by the user.
+                            <br><br>
+                            The whole project was written in python. To visualize the algorithm as it runs, the Turtle module was used.
+                            <br><br>
+                            The blue demonstrates the backtracking done by the algorithm when a dead end is reached.
+                        </p>
+                    </div>
 
-            </li>
+                </li>
+            </div>
 
             <br>
 
@@ -111,8 +132,24 @@
                 <p>
                     Takes an image and generates a pixelated version of the image using Python and the Pillow library. The image is pixelated by accessing 10x10 squares of pixels from the original image, averaging their RGB values, and replacing the original pixel values with the new RGB values.
                 </p>
+                <div id="birds">
+                    <img src="imgs/bird.png" alt="Pixelated bird">
+                    <img src="imgs/bird.jpg" alt="Normal bird">
+                </div>
+
             </li>
 
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <br>
 
             <li class="project-item">
@@ -120,7 +157,7 @@
                     <h2>Rubik's Cube</h2>
                 </a>
                 <p>
-                    Automatically or manually scrambles a rubik's cube and then displays each face of the cube in the terminal after scrambling.
+                    Automatically or manually scrambles a rubik's cube and then displays each face of the cube in the terminal after scrambling. The user can then choose to manually solve the cube or re-scramble it.
                 </p>
             </li>
 
@@ -138,6 +175,17 @@
         </ul>
     </div>
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
     <hr>
 
     <div id="contact">
@@ -148,8 +196,6 @@
             <li><a href="https://www.linkedin.com/in/nate-grobe-bb8252170/" target="_blank"><img src="imgs/icons/linkedin-logo.png" alt=""></a></li>
         </ul>
     </div>
-
-
 
     <script src="js/scripts.js"></script>
 </body>
