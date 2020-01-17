@@ -1,6 +1,6 @@
 // open resume
 $("#res-button").click(function(){
-    window.location.replace('pdf/nate-grobe-resume.pdf');
+    window.location.href = 'pdf/nate-grobe-resume.pdf';
 })
 
 // fade in skills
